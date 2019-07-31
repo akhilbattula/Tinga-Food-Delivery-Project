@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Tinga Delivery</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <string-array name="type_arrays">
+        <item>-- Type --</item>
+        <item>VEG</item>
+        <item>NON-VEG</item>
+        <item>EGG</item>
+    </string-array>
+    <string-array name="subtype_arrays">
+        <item>-- Sub Type --</item>
+        <item>Tinga Specials</item>
+        <item>Combos</item>
+        <item>Family Pack</item>
+        <item>Rice and Biryani</item>
+        <item>Starters</item>
+        <item>Main Course</item>
+        <item>Soups</item>
+        <item>Breads</item>
+        <item>Chinese</item>
+    </string-array>
+</resources>

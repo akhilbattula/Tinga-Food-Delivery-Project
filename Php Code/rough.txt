@@ -1,0 +1,164 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+if(isset($_POST['order_id'])){
+//if($rid!=null){
+print "1";
+    $rid = mysqli_real_escape_string($conn,htmlspecialchars($_POST['order_id']));
+   
+    $query = "SELECT * FROM `tbl_order` WHERE `order_id`=$rid";
+
+    $result = mysqli_query($conn, $query);
+    $res = array();
+    
+    if (!$result) {
+        array_push($res,
+          array('success'=>0,
+                    'message'=>"Server issue. Please agin later.",
+                    ));
+                    
+    }else{  
+     
+        $count = mysqli_num_rows($result);
+        
+        if($count === 0){
+            array_push($res,
+              array('success'=>0,
+                    'message'=>"Order details not found.",
+                    ));
+
+        }else{
+            $row = mysqli_fetch_array($result);
+            
+            $id = $row['restaurant_id'];
+            
+            $query1 = "SELECT *  FROM `tbl_order_Items` WHERE `order_id`=$id";
+            $result1 = mysqli_query($conn, $query1);
+            $items_array = array();
+            while($row_order_items = mysqli_fetch_array($result1)){
+            
+              $food_id = $row_order_items['food_id'];
+              $query_food_details = "SELECT * FROM `tbl_food_items` WHERE `food_id`='$food_id'";
+
+              $result_food_details = mysqli_query($conn, $query_food_details);
+              $row_food_details = mysqli_fetch_array($result_food_details);
+              
+              $bean1  = array('food_id'=> $row_order_items['food_id'],
+                              'food_name'=>$row_food_details['name'],
+                              'food_price'=>$row_food_details['price'],
+                              'quantity'=>$row_order_items['quantity'],
+                              'total_price'=>$row_order_items['price']
+              );
+              array_push($items_array,$bean1);
+            }
+                
+            $bean  = array('order_id'=> $row['order_id'],
+                              'total_price'=>$row['total_price'],
+                              'order_date'=>$row['order_date'],
+                              'restaurant_id'=>$row['restaurant_id'],
+                              'order_payment_mode'=>$row_restaurant['order_payment_mode'],
+                              'order_address'=>$row_restaurant['order_address'],
+                              'order_status'=>$row_restaurant['order_status'],
+                               'order_lat'=>$row_restaurant['order_lat'],
+                                'order_long'=>$row_restaurant['order_long']
+                                );
+                          
+               array_push($res,array("success"=>1,
+                      array("data" => $bean),array("items" => $items_array)
+                              ));
+      
+          
+        }
+    }
+
+
+
+
+     if($proceed === true){
+     
+     
+          echo "3";
+  
+          $uid = mysqli_real_escape_string($conn,htmlspecialchars($_POST['uid']));
+          $date = date('Y-m-d H:i:s');
+          
+          $query_upload="INSERT INTO `tbl_order`(`total_price`, `order_date`, `customer_id`, `restaurant_id`, `order_address`,`order_payment_mode`, `order_status`, `created_on`) VALUES ($total_price,'$order_date','$uid','$restaurant_id','$order_address','$order_payment_mode','Pending','$date')";
+           
+            //$query_upload="INSERT INTO `tbl_order`(`total_price`, `order_date`, `customer_id`, `restaurant_id`, `order_address`,`order_payment_mode`,`order_lat`,`order_long`, `order_status`, `created_on`) VALUES ($total_price,'$order_date','$uid','$restaurant_id','$order_address','$order_payment_mode','$order_lat','$order_lon','Pending','$date')";
+           if (mysqli_query($conn, $query_upload)) {
+  
+           
+              $last_id = mysqli_insert_id($conn);
+             
+              $query = "INSERT INTO `tbl_order_Items`(`food_id`, `quantity`,`price`,`order_id`,`created_at`) VALUES ";
+              
+              if($row['status']!="Available"){
+                  $unavailable_item = $row['name'];
+                  $proceed = false;
+              }        
+              $json1 = json_decode(rtrim($items, "\0"), true);
+              echo $json1;
+              foreach ($json1 as $key => $value) {
+                  $food_id = $value["food_id"];
+                  $food_name = $value["food_name"];
+                  $quantity = $value["quantity"];
+                  $total_price = $value["total_price"];
+                  $date1 = date('Y-m-d H:i:s');
+                  $query = $query."('".$food_id."','".$quantity."',".$total_price.",".$last_id.",'".$date1."'),";
+                  
+                   echo $query;
+                   
+              }
+              $query = substr($query,0,strlen($query)-2);
+              echo $query;
+              if ($conn->query($query) === TRUE) {
+                   array_push($response,
+                      array('success'=>1,
+                            'message'=>"Order placed successfully",
+                            'order_id'=>$last_id
+                            ));
+              } else {
+                 echo "5";
+                 array_push($response,
+                      array('success'=>0,
+                            'message'=>"Unable to place order due to " . mysqli_error($conn)
+                            ));
+              }
+              
+           } else {
+                 echo "6";
+                 
+                 array_push($response,
+                      array('success'=>0,
+                            'message'=>"Unable to place order due to " . mysqli_error($conn)
+                            ));
+              }
+       
+        }else{
+              echo "4";
+    
+             array_push($response,
+                  array('success'=>0,
+                        'message'=>$unavailable_item." is currently not available.",
+                        'item'=>$unavailable_item
+                        ));
+            
+        
+        }
+               

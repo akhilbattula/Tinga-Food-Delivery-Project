@@ -1,0 +1,146 @@
+{
+  "project_info": {
+    "project_number": "725348954659",
+    "firebase_url": "https://tinga-3580f.firebaseio.com",
+    "project_id": "tinga-3580f",
+    "storage_bucket": "tinga-3580f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:725348954659:android:3ca9d07c3d7a9329",
+        "android_client_info": {
+          "package_name": "com.sytiqhub.tinga"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "725348954659-mksn3e3k77f1ug2bv1rpm9269s5a2foa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sytiqhub.tinga",
+            "certificate_hash": "8e4550617c487c0c0aa4e7b325fab39b6f5d5816"
+          }
+        },
+        {
+          "client_id": "725348954659-qjvg23mf16oba2j4tphb2i7bm00bd13a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sytiqhub.tinga",
+            "certificate_hash": "31d36b12742f52ec6c1238bb9156c1791c4c0ac3"
+          }
+        },
+        {
+          "client_id": "725348954659-eic5sj618aa69vvq62age9j64d8a4q59.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sytiqhub.tinga",
+            "certificate_hash": "45aee35ebce3ad2a04de93de07dd37494612398b"
+          }
+        },
+        {
+          "client_id": "725348954659-ujeqbnl6qfn2395g5dl6nk8lbcemjc1r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sytiqhub.tinga",
+            "certificate_hash": "f103c661a5460fe2e11525ae7199a2960a455adc"
+          }
+        },
+        {
+          "client_id": "725348954659-k4ljsm6g2lds4vfebba8ggagb57skocb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sytiqhub.tinga",
+            "certificate_hash": "f03f8a337ca03525cd750d55442747d59eb0e96f"
+          }
+        },
+        {
+          "client_id": "725348954659-gqoop7mtod131olv3eslvt193hd6a9c1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sytiqhub.tinga",
+            "certificate_hash": "80f5e293b5847dda87177ff095223bed9ec1cfbb"
+          }
+        },
+        {
+          "client_id": "725348954659-23lap9m0ntrv5h4m0jgpr7ddknivrniu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCS11KKuFLPkkPX96bLqZXYu5-6pOpe26M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "725348954659-23lap9m0ntrv5h4m0jgpr7ddknivrniu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:725348954659:android:8037680f2db13226",
+        "android_client_info": {
+          "package_name": "com.sytiqhub.tingadelivery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "725348954659-23lap9m0ntrv5h4m0jgpr7ddknivrniu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCS11KKuFLPkkPX96bLqZXYu5-6pOpe26M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "725348954659-23lap9m0ntrv5h4m0jgpr7ddknivrniu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:725348954659:android:adbee801deb09193",
+        "android_client_info": {
+          "package_name": "com.sytiqhub.tingarestaurant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "725348954659-23lap9m0ntrv5h4m0jgpr7ddknivrniu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCS11KKuFLPkkPX96bLqZXYu5-6pOpe26M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "725348954659-23lap9m0ntrv5h4m0jgpr7ddknivrniu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

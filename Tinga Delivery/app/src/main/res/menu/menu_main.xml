@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.sytiqhub.tingadelivery.MainActivity">
+
+    <item
+        android:id="@+id/logout"
+        android:title=""
+        app:showAsAction="always"
+        android:icon="@drawable/ic_action_logout"
+        />
+
+    <item
+        android:id="@+id/myswitch"
+        android:title=""
+        app:showAsAction="always"
+        app:actionLayout="@layout/switch_layout"
+        />
+</menu>
