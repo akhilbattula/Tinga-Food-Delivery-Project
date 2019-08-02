@@ -1,8 +1,8 @@
-<resources>
+﻿<resources>
     <string name="app_name">Tinga</string>
 
-    <string name="facebook_application_id" translatable="false">293959744653477</string>
-    <string name="facebook_login_protocol_scheme" translatable="false">fb293959744653477</string>
+    <string name="facebook_application_id" translatable="false">YOUR_APPLICATION_ID_HERE</string>
+    <string name="facebook_login_protocol_scheme" translatable="false">YOUR_APPLICATION_ID_HERE</string>
     <string name="title_activity_home">Tinga</string>
     <string name="title_activity_home_acitivity">Tinga</string>
 
@@ -104,7 +104,7 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="title_activity_maps">Select Location</string>
-    <string name="google_api_key_places">AIzaSyB4xS7Rf3B6ixqR3GJSjmo03gopQvUT-cU</string>
+    <string name="google_api_key_places">YOUR_API_KEY_HERE</string>
     <string name="title_activity_scrolling">ScrollingActivity</string>
     <string name="title_activity_order_details">Order Summary</string>
 
@@ -116,11 +116,6 @@
     <string name="title_activity_location">Map</string>
     <string name="title_activity_address">Address Book</string>
     <string name="mapbox_access_token">
-        pk.eyJ1IjoiYWtoaWxiYXR0dWxhIiwiYSI6ImNqdnZhMjFoZzBhOTQ0MW1yMXJ4amRydjQifQ._uYeE6iRnivTQU7GIsFasw
+        YOUR_API_KEY_HERE
     </string>
 </resources>
-
-
-        <!-- keytool -exportcert -alias androiddebugkey -keystore "C:\Users\DELL\.android\debug.keystore" | "F:\openssl-0.9.8k_X64\bin\openssl" sha1 -binary | "F:\openssl-0.9.8k_X64\bin\openssl" base64
-
-    1wwfPIQZwTUut/kH4UPf9SCy7R4=-->
