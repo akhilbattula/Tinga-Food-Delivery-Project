@@ -1,0 +1,4 @@
+# Referenced at D:\Android\Projects\Tinga Project\Tinga\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:35
+-keep class com.sytiqhub.tinga.others.AppController { <init>(); }
+# Referenced at D:\Android\Projects\Tinga Project\Tinga\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:35
+-keep class com.sytiqhub.tinga.tinga { <init>(); }
